@@ -8,6 +8,8 @@ global mime_to_ext: table[string] of string = {
 	["image/png"] = "png",
 #	["text/html"] = "html",
 };
+#analyze log files with the following command to find file mime types to add to the list
+#>cat files.log | /opt/zeek/bin/zeek-cut id.orig_h id.orig_p id.resp_h duration mime_type filename
 
 event file_sniff(f: fa_file, meta: fa_metadata)
 	{
