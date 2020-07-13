@@ -1,4 +1,4 @@
-#This is the zeek file for extracting various files from a pcap
+#This is the zeek file for extracting various types files from a pcap based on their MIME type
 
 #Filter file extraction based on various MIME type
 global mime_to_ext: table[string] of string = {
